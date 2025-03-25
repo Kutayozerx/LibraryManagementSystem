@@ -43,7 +43,7 @@ public class Book {
         isBorrowed = false;
     }
 
-    // to string methodu
+    // to string ekliyoruz
     @Override
     public String toString() {
         return "Book{" +
