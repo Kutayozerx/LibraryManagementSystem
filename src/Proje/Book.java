@@ -4,11 +4,14 @@ import jdk.jshell.Snippet;
 
 public class Book {
 
+    // kitap oluşturoyurz
     private String title;
     private String author;
     private String isbn;
     private boolean isBorrowed;
 
+
+    // Constructor ve getter methodları ekliyoruz
     public Book(String title, String author, String isbn) {
         this.title = title;
         this.author = author;
@@ -40,6 +43,7 @@ public class Book {
         isBorrowed = false;
     }
 
+    // to string methodu
     @Override
     public String toString() {
         return "Book{" +

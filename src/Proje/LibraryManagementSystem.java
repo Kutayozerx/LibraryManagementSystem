@@ -12,6 +12,13 @@ public class LibraryManagementSystem {
 
     public static void main(String[] args) {
 
+        // menü karşılasın
+        // menüde seçenekler olsun
+        // bu seçenekler 1.kitap ekleme 2. bütün kitapları gösterme 3. kitap ismine göre arama
+        // 4.kitap ödünç alma 5. kitap geri getirme 6. çıkış
+        // komut satırından bilgi alınacak
+        // çıkış seçeneği seçilmediği sürece uygulama çalışmaya devam edecek
+
         boolean running = true;
 
         while (running){
@@ -53,6 +60,7 @@ public class LibraryManagementSystem {
             }
         }
     }
+    // kullanıcıdan kitap bilgilerini aldığımız method
     private static void addBook() {
         System.out.print("Enter book title: ");
         String title = scanner.nextLine();
@@ -64,6 +72,7 @@ public class LibraryManagementSystem {
         System.out.println("Book added successfully!");
     }
 
+    // kütüphanedeki kitap isimlerine göre kitap arayan method
     private static void searchBook() {
         System.out.print("Enter book title to search: ");
         String title = scanner.nextLine();

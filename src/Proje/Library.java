@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Library {
 
+    //Kitapların duracağı arraylist
     private  ArrayList<Book> books = new ArrayList<>();
 
 
@@ -11,7 +12,7 @@ public class Library {
         books.add(book);
 
     }
-
+    // Kitap arama methodu
     public  Book searchBook(String title) {
         for (Book book : books) {
             if (book.getTitle().equalsIgnoreCase(title)) {
@@ -21,6 +22,7 @@ public class Library {
         return null;
     }
 
+    // Kitap ödünç alma methodu
     public  void checkOutBook(String isbn) {
         Book book = searchisbn(isbn);
         if (book != null) {
@@ -42,6 +44,7 @@ public class Library {
         return null;
     }
 
+    // Kütüphanedeki kitapları kontrol eden method
     public  void displayBooks() {
         if (books.isEmpty()) {
             System.out.println("No books available in the library.");
@@ -53,6 +56,7 @@ public class Library {
         }
     }
 
+    // ödünç alınan kitabı geri getiren method
     public  void returnBook(String isbn) {
         Book book = searchisbn(isbn);
         if (book != null) {
