@@ -14,7 +14,7 @@ public class LibraryManagementSystem {
         // bu seçenekler 1.kitap ekleme 2. bütün kitapları gösterme 3. kitap ismine göre arama
         // 4.kitap ödünç alma 5. kitap geri getirme 6. çıkış
         // komut satırından bilgi alınacak
-        // çıkış seçeneği seçilmediği sürece uygulama çalışmaya devam edecek
+        // çıkış seçeneği seçilmediği sürece uygulama çalışmaya devam edecek.
 
         boolean running = true;
 
