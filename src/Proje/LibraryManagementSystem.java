@@ -2,8 +2,6 @@ package Proje;
 
 import java.util.Scanner;
 
-
-
 public class LibraryManagementSystem {
 
     private static Library library = new Library();
@@ -21,15 +19,8 @@ public class LibraryManagementSystem {
         boolean running = true;
 
         while (running){
-            System.out.println("\nWelcome to the Library Management System!");
-            System.out.println("\nPlease select an option:");
-            System.out.println("1. Add a new book");
-            System.out.println("2. Display all books");
-            System.out.println("3. Search for a book by title");
-            System.out.println("4. Check out a book");
-            System.out.println("5. Return a book");
-            System.out.println("6. Exit");
-            System.out.print("Enter your choice: ");
+
+            printmenu();
 
             int choice = scanner.nextInt();
             scanner.nextLine();
@@ -59,6 +50,22 @@ public class LibraryManagementSystem {
             }
         }
     }
+
+        private static void printmenu() {
+            System.out.println("\nWelcome to the Library Management System!");
+            System.out.println("\nPlease select an option:");
+            System.out.println("1. Add a new book");
+            System.out.println("2. Display all books");
+            System.out.println("3. Search for a book by title");
+            System.out.println("4. Check out a book");
+            System.out.println("5. Return a book");
+            System.out.println("6. Exit");
+            System.out.print("Enter your choice: ");
+
+        }
+
+
+
     // kullanıcıdan kitap bilgilerini aldığımız method
     private static void addBook() {
         System.out.print("Enter book title: ");

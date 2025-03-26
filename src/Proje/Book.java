@@ -50,7 +50,7 @@ public class Book {
                 "title='" + title + '\'' +
                 ", author='" + author + '\'' +
                 ", ISBN='" + isbn + '\'' +
-                ", Status=" + isBorrowed +
-                '}';
+                ", Status=" + (isBorrowed ? "Checked Out" : "Available") +
+        '}';
     }
 }
