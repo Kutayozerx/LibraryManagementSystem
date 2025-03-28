@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class LibraryManagementSystem {
 
-    private static Library library = new Library();
-    private static Scanner scanner = new Scanner(System.in);
+    private static final LibraryService LibraryService = new LibraryService();
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
 
@@ -31,7 +31,7 @@ public class LibraryManagementSystem {
                     addBook();
                     break;
                 case 2:
-                    library.displayBooks();
+                    LibraryService.displayBooks();
                     break;
                 case 3:
                     searchBook();
@@ -66,7 +66,7 @@ public class LibraryManagementSystem {
 
 
 
-    // kullanıcıdan kitap bilgilerini aldığımız method
+    // kullanıcıdan kitap bilgilerini aldığımız metod
     private static void addBook() {
         System.out.print("Enter book title: ");
         String title = scanner.nextLine();
@@ -74,15 +74,15 @@ public class LibraryManagementSystem {
         String author = scanner.nextLine();
         System.out.print("Enter ISBN: ");
         String isbn = scanner.nextLine();
-        library.addBook(new Book(title, author, isbn));
+        LibraryService.addBook(new Book(title, author, isbn));
         System.out.println("Book added successfully!");
     }
 
-    // kütüphanedeki kitap isimlerine göre kitap arayan method
+    // kütüphanedeki kitap isimlerine göre kitap arayan metod
     private static void searchBook() {
         System.out.print("Enter book title to search: ");
         String title = scanner.nextLine();
-        Book book = library.searchBook(title);
+        Book book = LibraryService.searchBook(title);
         if (book != null) {
             System.out.println("Book found:");
             System.out.println(book);
@@ -94,12 +94,12 @@ public class LibraryManagementSystem {
     private static void checkOutBook() {
         System.out.print("Enter the ISBN of the you want to check out: ");
         String isbn = scanner.nextLine();
-        library.checkOutBook(isbn);
+        LibraryService.checkOutBook(isbn);
     }
 
     private static void returnBook() {
         System.out.print("Enter the ISBN the book you want to return: ");
         String isbn = scanner.nextLine();
-        library.returnBook(isbn);
+        LibraryService.returnBook(isbn);
     }
 }

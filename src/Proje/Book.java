@@ -11,12 +11,16 @@ public class Book {
     private boolean isBorrowed;
 
 
-    // Constructor ve getter methodları ekliyoruz
+    // Constructor ve getter metodları ekliyoruz
     public Book(String title, String author, String isbn) {
         this.title = title;
         this.author = author;
         this.isbn = isbn;
         this.isBorrowed = false;
+    }
+
+    public void setBorrowed(boolean borrowed) {
+        isBorrowed = borrowed;
     }
 
     public String getTitle() {
